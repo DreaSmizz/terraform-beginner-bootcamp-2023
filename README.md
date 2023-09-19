@@ -234,3 +234,18 @@ If you lose this file, you lose the state information of your infrastructure.
 #### Terraform Directory
 
 `.terraform` directory contains binaries of terraform providers.
+
+### Bucket Creation
+
+We updated our main.tf file to create an s3 bucket in AWs.  We first created a random bucket using terraform provider and executed the terrform terraform init/plan/apply to validate the bucket was created.
+
+We made use of the 'random' provider and generated a bucket.  
+
+We then tested within AWS and attempted to create a bucket.  The bucket was not created due to the below issues:
+- The bucket name contained an upper case letter
+This is a direct violation of AWS bucket naming conventions.  We addressed this by adding two variables
+- upper = true
+- lower = false
+
+We were then able to execute the terraform plan and validate the bucket was there
+
