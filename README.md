@@ -247,5 +247,38 @@ This is a direct violation of AWS bucket naming conventions.  We addressed this 
 - upper = true
 - lower = false
 
-We were then able to execute the terraform plan and validate the bucket was there
+We were then able to execute the terraform plan and validate the bucket was there.
+
+## Issues with Terraform Cloud Login and Gitpod Workspace
+
+When attempting to run `terraform login` it will launch via bash a wiswig view to generate a token.  But it does not work as expected in Gitpod VSCode browser.
+
+We solved this by implementing a workaround which required us to manually create the file and copy/paste our token into the file and
+generate the file in Terraform Cloud.
+
+The token can be found here:
+
+```
+https://app.terraform.io/app/settings/tokens?source=terraform-login
+```
+
+Then manually create the file below and open the file:
+
+```sh
+touch /home/gitpod/.terraform.d/credentials.json
+```
+
+Insert the code below and replace 'YOUR-TERRAFORM-CLOUD-TOKEN' with your actual token:
+
+```json
+{
+    "credentials": {
+        "app.terraform.io": {
+            "token": "YOUR-TERRAFORM-CLOUD-TOKEN"
+        }
+    }
+}
+```
+
+
 
