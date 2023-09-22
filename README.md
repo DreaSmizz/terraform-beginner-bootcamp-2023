@@ -279,6 +279,8 @@ Insert the code below and replace 'YOUR-TERRAFORM-CLOUD-TOKEN' with your actual 
     }
 }
 ```
+We have automated this workaround with bash scripting, script can be found at [./bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
+
 
 
 
