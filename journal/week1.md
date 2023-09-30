@@ -12,7 +12,7 @@ PROJECT_ROOT
 |-- terraform.tfvars   # the data of variables we want to load into our Terraform project
 |-- providers.tf       # defines required providers and their configuration
 |-- outputs.tf         # stores outputs
-|-- README.md          # this is required for root modules
+|__ README.md          # this is required for root modules
 ```
 
 [Standard Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
