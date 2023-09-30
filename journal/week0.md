@@ -8,14 +8,14 @@
   * [Shebang Considerations](#shebang-considerations)
     + [Execution Considersatons](#execution-considersatons)
     + [Linux Permissions Considerations](#linux-permissions-considerations)
-  * [Github Lifecycle (Before, Init, Command)](#github-lifecycle--before--init--command-)
-  * [Working with Env Vars](#working-with-env-vars)
-    + [env command](#env-command)
-    + [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
-    + [Printing Vars](#printing-vars)
-      - [Scoping of Env Vars](#scoping-of-env-vars)
-    + [Persisting Env Cars in Gitpod](#persisting-env-cars-in-gitpod)
-  * [AWS CLI Installation](#aws-cli-installation)
+- [Gitpod Lifecycle - Before, Init, Command](#gitpod-lifecycle---before--init--command)
+- [Working with Env Vars](#working-with-env-vars)
+  * [env command](#env-command)
+  * [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
+  * [Printing Vars](#printing-vars)
+  * [Scoping of Env Vars](#scoping-of-env-vars)
+  * [Persisting Env Cars in Gitpod](#persisting-env-cars-in-gitpod)
+- [AWS CLI Installation](#aws-cli-installation)
 - [Terraform Basics](#terraform-basics)
   * [Terraform Registry](#terraform-registry)
   * [Terraform Console](#terraform-console)
@@ -28,7 +28,8 @@
     + [Terraform Directory](#terraform-directory)
   * [Bucket Creation](#bucket-creation)
 - [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
-## Semantic Versioning :mage:
+  
+## Semantic Versioning
 
 
 This project is going to utilize semantic versioning for its tagging.
@@ -118,7 +119,7 @@ chmod 744 ./bin/install_terraform_cli
 ```
 https://en.wikipedia.org/wiki/Chmod
 
-### Github Lifecycle (Before, Init, Command)
+### Gitpod Lifecycle (Before, Init, Command)
 
 We need to be careful when using the Init because it will not rerun if we restart an existing workspace.
 
