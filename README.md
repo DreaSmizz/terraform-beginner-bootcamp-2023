@@ -1,13 +1,35 @@
 # Terraform Beginner Bootcamp 2023
 
-## Table of Contents
-
 - [Semantic Versioning](#semantic-versioning)
 - [Install the Terraform CLI](#install-the-terraform-cli)
-- [Consideratons with the Terraform CLI changes](#considersations-with-the-terraform-cli-changes)
+  * [Considersations with the Terraform CLI changes](#considersations-with-the-terraform-cli-changes)
+  * [Considerations for Linux Distribution](#considerations-for-linux-distribution)
+  * [Refactoring into Bash Scripts](#refactoring-into-bash-scripts)
+  * [Shebang Considerations](#shebang-considerations)
+    + [Execution Considersatons](#execution-considersatons)
+    + [Linux Permissions Considerations](#linux-permissions-considerations)
+  * [Github Lifecycle (Before, Init, Command)](#github-lifecycle--before--init--command-)
+  * [Working with Env Vars](#working-with-env-vars)
+    + [env command](#env-command)
+    + [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
+    + [Printing Vars](#printing-vars)
+      - [Scoping of Env Vars](#scoping-of-env-vars)
+    + [Persisting Env Cars in Gitpod](#persisting-env-cars-in-gitpod)
+  * [AWS CLI Installation](#aws-cli-installation)
+- [Terraform Basics](#terraform-basics)
+  * [Terraform Registry](#terraform-registry)
+  * [Terraform Console](#terraform-console)
+    + [Terraform Init](#terraform-init)
+    + [Terraform Plan](#terraform-plan)
+    + [Terraform Apply](#terraform-apply)
+    + [Terraform Destroy](#terraform-destroy)
+    + [Terraform Lock Files](#terraform-lock-files)
+    + [Terraform State Files](#terraform-state-files)
+    + [Terraform Directory](#terraform-directory)
+  * [Bucket Creation](#bucket-creation)
+- [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
 
-
-## Semantic Versioning :mage:
+## Semantic Versioning
 
 
 This project is going to utilize semantic versioning for its tagging.
