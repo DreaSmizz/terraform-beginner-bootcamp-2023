@@ -56,6 +56,27 @@ If for any reason a file is missing it just goes to the next avaiable file in th
 - Any -var and -var-file options on the command line in the order they are provided, this includes Terraform Cloud workspace.
 
 
+## Dealing With Configuration Drift
+
+## What happens if we lose our state file?
+
+If you lose your statefile, you most likely have to tear down all your cloud infrastructure manually.
+
+You can use terraform import but it won't work for all cloud resources.  You need to check the terraform providers documentation for which resources support import.
+### Fix Missing Resources with Terraform Import
+
+`terraform import aws_s3_bucket.bucket bucket-name`
+
+We discovered resources were missing as we didn't properly destroy our infra.  We made use of the import flag to import a bucket name and create it.
+[Terraform Import](https://developer.hashicorp.com/terraform/language/import)
+[Import](https://developer.hashicorp.com/terraform/cli/import)
+[AWS S3 Bucket Import](https://registry.terraform.io/providers/hashicorop/aws/latest/docs/resources/s3_bucket#import)
+### Fix Manual Configuration
+
+Through some manual configurations we were able to correct some mistakes that occurred to us not properly destroying our s3 bucket through ClickOps.  It will try and put our infra back in place with the expected state.
+[Manage Resource Drift](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift)
+
+
 
 
 
