@@ -76,8 +76,44 @@ We discovered resources were missing as we didn't properly destroy our infra.  W
 Through some manual configurations we were able to correct some mistakes that occurred to us not properly destroying our s3 bucket through ClickOps.  It will try and put our infra back in place with the expected state.
 [Manage Resource Drift](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift)
 
+## Fix using Terraform Refresh
 
+```sh
+terraform apply -refresh-only -auto-approve
+```
 
+## Terraform Modules
+
+### Terraform Module Structure
+
+It is recommended to place modules in a module directory when locally developing modules.  Feel free to name it whatever you would like. We named it with _aws as it was aws
+
+### Passing Input Variables
+
+We can pass input variables to our module.
+The module has to declare these terraform variables in its own variables.tf
+
+```tf
+module "terrahouse_aws" {
+    source = "./modules/terrahouse_aws"
+    user_uuid = var.user_uuid
+    bucket_name = var.bucket_name
+}
+```
+
+### Module Sources
+
+We can import the module from various places eg:
+- locally
+- Github
+- Terraform Registry
+
+```tf
+module "terrahouse_aws" {
+    source = "./modules/terrahouse_aws"
+}
+```
+[Modules Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
 
 
 
