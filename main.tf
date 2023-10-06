@@ -7,12 +7,12 @@ terraform {
   #    name = "terra-house-1"
   #  }
   #}
-  #cloud {
-  #  organization = "Smith-Enterprises"
-  #  workspaces {
-  #    name = "terra-house-1"
-  #  }
-  #}
+  cloud {
+    organization = "Smith-Enterprises"
+    workspaces {
+      name = "terraform-cloud"
+    }
+  }
 #}
 }
 
