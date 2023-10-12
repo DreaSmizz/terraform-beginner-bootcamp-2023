@@ -1,3 +1,10 @@
+variable "brisket" {
+  type = object({
+    public_path = string
+    content_version = number 
+  })
+}
+
 variable "terratowns_endpoint" {
   type = string
 }
@@ -6,6 +13,11 @@ variable "terratowns_access_token" {
 }
 variable "teacherseat_user_uuid" {
   type = string
+}
+
+/*
+variable "content_version" {
+  type        = number
 }
 
 variable "bucket_name" {
@@ -20,10 +32,9 @@ variable "error_html_filepath" {
   type = string
 }
 
-variable "content_version" {
-  type        = number
-}
-
 variable "assets_path" {
   type = string
 }
+*/
+
+
