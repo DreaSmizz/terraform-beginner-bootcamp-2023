@@ -61,3 +61,21 @@ Terraform Provider resources utilize CRUD.
 CRUD stands for Create, Read, Update and Delete.
 
 [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+
+### Terraform Cloud and Muli-Home Refactor
+
+We did some refactoring which allowed us to clean up our code and make it more readable.  We also implemented the ability
+to create more than one terrahouse if desired.
+### HTML Adventure
+
+Prior to this, I had little experience with HTML.  I found the below pages helpful so that I could create my page
+
+[Elemments and Structure](https://codeacademy.com/learn/learn-html/modules/learn-html-elements/cheatsheet)
+
+### Final Thoughts
+
+I came into this bootcamp with limited experience and not sure how quickly I would learn and was afraid I would fall behind
+I leave the bootcamp with an understanding of Terraform and a completed project.  I am proud of the lessons I learned and the
+fact that I was able to stick with it through to the end.  Although frustrating at time, I found that I have learned more
+troubleshooting skills and was even able to pick up on some of Andrew's famous code traps.  I am thankful for this experience
+and can't wait for the next bootcamp.
